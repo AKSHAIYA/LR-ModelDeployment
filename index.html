@@ -1,0 +1,55 @@
+<html>
+    <title>
+        Sales app
+    </title>
+    <body>
+        <form action = "{{url_for('predict')}}" method='post'>
+            <label>Item_Type: </label>
+
+
+            <select name="Item_Type" id="Item_Type">
+            <option value="Fruits and Vegetables">Fruits and Vegetables</option>  
+            <option value="Snack Foods">Snack Foods</option>
+            <option value="Household">Household</option>
+            <option value="Frozen Foods">Frozen Foods</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Canned">Canned</option>
+            <option value="Baking Goods ">Baking Goods </option>
+            <option value="Health and Hygiene">Health and Hygiene</option>
+            <option value="Soft Drinks">Soft Drinks</option>
+            <option value="Meat">Meat</option>
+            <option value="Breads">Breads</option>
+            <option value="Hard Drinks">Hard Drinks</option>
+            <option value="Starchy Foods">Starchy Foods</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Others">Others</option>
+            </select>
+            
+            <br>
+            <div><br></div>
+            <label>Outlet_Type: </label>
+
+            <select name="Outlet_Type" id="Outlet_Type">
+                <option value="Supermarket Type1">Supermarket Type1</option>  
+                <option value="Supermarket Type2">Supermarket Type2</option>
+                <option value="Supermarket Type3">Supermarket Type3</option>
+                <option value="Frozen Foods">Grocery Store</option>
+            </select>
+            
+            <br>
+            <div><br></div>
+
+            <label>Item_MRP: </label><input type = "text" name = "Item_MRP" /><br>
+            <div><br></div>
+            <button type = "submit">Predict</button>
+
+        </form>
+
+        {{ prediction }}
+
+
+    </body>
+
+
+</html>
